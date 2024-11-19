@@ -35,10 +35,8 @@ docker compose -f Flowise/docker/docker-compose.yaml up -d
 
 #8 https://www.activepieces.com/
 #Porta 8080
-git clone https://github.com/activepieces/activepieces.git
-cd activepieces
-sh tools/deploy.sh
-docker-compose -p activepieces up
+cp .env.activepieces activepieces/.env
+docker-compose -f activepieces/docker-compose.yaml up -d
 
 # 10 https://www.mautic.org/
 git clone https://github.com/mautic/docker-mautic.git
