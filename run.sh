@@ -6,6 +6,7 @@ docker-compose -f nocodb/docker-compose/2_pg/docker-compose.yml  up -d
 # 2. n8n
 docker volume create n8n_data
 docker run -d -e  N8N_SECURE_COOKIE=false --name n8n -p 9902:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+
 # 3. dify.ai  80 443
 
 cp .env.dify dify/docker/.env
