@@ -7,16 +7,16 @@ docker-compose -f nocodb/docker-compose/2_pg/docker-compose.yml  up -d
 docker volume create n8n_data
 docker run -d -e  N8N_SECURE_COOKIE=false --name n8n -p 9902:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 
-# 3. dify.ai  80 443
+# 3. dify.ai  9903:80 9904:443
 
 cp .env.dify dify/docker/.env
 docker-compose -f dify/docker/docker-compose.yaml up -d
     
-# 4. https://supabase.com/
+# 4. https://supabase.com/ 9905:80 9906:443 9907:6543
 
-cp .env.supabase dify/docker/.env
-docker compose pull
-docker-compose -f supabase/docker/docker-compose.yaml up -d
+cp .env.supabase supabase/docker/.env
+docker-compose -f supabase/docker/docker-compose.yml pull
+docker-compose -f supabase/docker/docker-compose.yml up -d
 
 
 # 5. https://www.odoo.com/pt_BR CHATO
