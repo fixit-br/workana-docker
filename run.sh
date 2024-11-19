@@ -29,19 +29,20 @@ docker-compose -f typebot/docker-compose.yaml up -d
 # 7. https://flowiseai.com/
 
 cp .env.Flowise Flowise/.env
-docker compose -f Flowise/docker/docker-compose.yaml up -d
+docker-compose -f Flowise/docker/docker-compose.yaml up -d
 
 
 
 #8 https://www.activepieces.com/
-#Porta 8080
+#8080
 cp .env.activepieces activepieces/.env
 docker-compose -f activepieces/docker-compose.yaml up -d
 
-# 10 https://www.mautic.org/
+
+# 10 https://www.mautic.org/ 8001:80
 git clone https://github.com/mautic/docker-mautic.git
-cd docker-mautic/examples/basic
-docker-compose up
+cp .env.mautic mautic/basic/.mautic_env
+docker-compose -f mautic/basic/docker-compose.yml up -d
 
 
 
