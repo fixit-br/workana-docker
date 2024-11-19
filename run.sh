@@ -26,7 +26,7 @@ cp .env.typebot typebot/.env
 docker-compose -f typebot/docker-compose.yaml up -d 
 
 
-# 7. https://flowiseai.com/
+# 7. https://flowiseai.com/ 9910
 
 cp .env.Flowise Flowise/.env
 docker-compose -f Flowise/docker/docker-compose.yaml up -d
