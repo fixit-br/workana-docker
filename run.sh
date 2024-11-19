@@ -21,7 +21,7 @@ docker-compose -f supabase/docker/docker-compose.yml up -d
 
 # 5. https://www.odoo.com/pt_BR CHATO
 
-# 6. https://typebot.io/ (ilimitado) CHATO 8080 8081
+# 6. https://typebot.io/ (ilimitado) 9908:3000 9909:3000
 cp .env.typebot typebot/.env
 docker-compose -f typebot/docker-compose.yaml up -d 
 
