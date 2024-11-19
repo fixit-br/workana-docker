@@ -1,7 +1,7 @@
 !bin/bash
 
-# 1. nocodb.com 8080
-docker-compose -f nocodb/docker-compose/2_pg/docker-compose.yaml  up -d
+# 1. nocodb.com 9901:8080
+docker-compose -f nocodb/docker-compose/2_pg/docker-compose.yml  up -d
 
 # 2. n8n
 docker volume create n8n_data
